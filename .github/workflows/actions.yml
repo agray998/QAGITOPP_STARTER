@@ -22,7 +22,7 @@ jobs:
       with:
         context: git
         images: |
-          ghcr.io/agray998/express-app
+          ghcr.io/${{ github.repository_owner }}/express-app
         tags: |
           type=sha
           type=raw,value=latest
