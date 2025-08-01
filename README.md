@@ -4,6 +4,7 @@ This is the starter repo for the QA GitOps in Practice (QAGITOPP) Course
 ## Overview
 
 ## Provided Resources
+```
 .  
 ├── .github  
 │   └── workflows  
@@ -24,4 +25,5 @@ This is the starter repo for the QA GitOps in Practice (QAGITOPP) Course
 │           └── svc.yaml  
 └── monitoring  
     ├── grafana  
-    └── prometheus  
+    └── prometheus
+```  
