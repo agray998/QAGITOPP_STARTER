@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: qagitopp-starter
+  labels:
+    app: express-metrics-server
+    repo: qagitopp-starter
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      app: express-metrics-server
+      repo: qagitopp-starter
+  template:
+    metadata:
+      labels:
+        app: express-metrics-server
+        repo: qagitopp-starter
+    spec:
+      containers:
+      - image: {{ .Values.deployment.image }}:{{ .Values.deployment.tag }}
+        imagePullPolicy: Always
+        name: express-metrics-server
+        ports:
+        - containerPort: {{ .Values.service.appPort }}

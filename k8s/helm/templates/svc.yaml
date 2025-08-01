@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: express-metrics-service
+  labels:
+    repo: qagitopp-starter
+spec:
+  selector:
+    app: express-metrics-server
+    repo: qagitopp-starter
+  ports:
+  - port: {{ .Values.service.servicePort }}
+    targetPort: {{ .Values.service.appPort }}
+  type: {{ .Values.service.type }}
